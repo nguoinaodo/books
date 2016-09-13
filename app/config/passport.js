@@ -1,6 +1,5 @@
 'use strict';
 //config strategy
-//var GitHubStrategy = require('passport-github').Strategy;
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/users.js');
