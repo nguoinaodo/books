@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        title Home
+        meta(charset="utf-8")
+        link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+        link(rel="stylesheet" type="text/css" href="/public/css/main.css")
+    body
+        #navbar
+            ul
+                li.nav-left: a(href="/") boooks
+                li.nav-left: a(href="/").active Home
+                if auth                                               
+                    li.nav-right: a(href="/logout") Logout
+                    li.nav-right: a(href="/setting") Setting
+                    li.nav-right: a(href="/mybooks") My Books
+                    li.nav-right: a(href="/allbooks") All Books
+                else 
+                    li.nav-right: a(href="/login") Login
+                    li.nav-right: a(href="/signup") Sign up                   
+        #banner
+            h1 boooks
+        #features
+            h1 Features:
+            #featuresList.row
+                .feature.col-md-4 Catalogue your books online
+                .feature.col-md-4 See all of the books our users own
+                .feature.col-md-4 Request to borrow other users's books
+                .feature.col-md-4 Easily manage books and requests from your dashboard 
+            

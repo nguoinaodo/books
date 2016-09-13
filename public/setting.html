@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Setting</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="/public/css/main.css" type="text/css" />
+    </head>
+    <body>
+          <div id="navbar">
+            <ul>
+              <li class="nav-left"><a href="/">boooks</a></li>
+              <li class="nav-left"><a href="/">Home</a></li>
+              <li class="nav-right"><a href="/logout">Logout</a></li>
+              <li class="nav-right"><a href="/setting" class="active">Setting</a></li>
+              <li class="nav-right"><a href="/mybooks">My Books</a></li>
+              <li class="nav-right"><a href="/allbooks">All Books</a></li>
+            </ul>
+          </div>
+            <div class="container">
+              <div id="setting">
+                <div id="updateProfile">
+                  <h1>Update profile:</h1>
+                  <h5><b>City:</b></h5>
+                  <input id="city"></input>
+                  <h5><b>State:</b></h5>
+                  <input id="state"></input>
+                  <br>
+                  <button id="saveProfile">Save changes</button>
+                </div>
+                <hr>
+                <div id="changePassword">
+                  <h1>Change password:</h1>
+                  <h5><b>Current password:</b></h5>
+                  <input id="currentPass"></input>
+                  <h5><b>New password:</b></h5>
+                  <input id="newPass">
+                  <br>
+                  <button id="savePass">Save changes</button>
+                </div>
+              </div>
+            </div>
+            
+            <script type="text/javascript" src="common/ajax-functions.js"></script>
+            <script type="text/javascript" src="controllers/setting.client.js"></script>
+    </body>
+</html>

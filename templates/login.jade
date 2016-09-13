@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title Login
+        meta(charset="utf-8")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css")
+        link(rel="stylesheet" href="/public/css/main.css" type="text/css")
+    body
+        #navbar 
+            ul
+                li.nav-left: a(href="/") boooks
+                li.nav-left: a(href="/") Home
+                if auth
+                    li.nav-right: a(href="/logout") Logout
+                    li.nav-right: a(href="/setting") Setting
+                    li.nav-right: a(href="/mybooks") My Books
+                    li.nav-right: a(href="/allbooks") All Books
+                else 
+                    li.nav-right: a(href="/login").active Login
+                    li.nav-right: a(href="/signup") Sign up
+        .container
+            h1 Login
+            br
+            form(action="/login", method="post")
+                h5: b Email:
+                input#loginEmail(type="email", name="email")
+                h5: b Password:
+                input#loginPass(type="password", name="password")
+                br
+                br
+                button#loginBtn(type="submit") Login
+                button#regBtn Register
+        

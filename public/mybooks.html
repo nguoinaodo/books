@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My books</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="/public/css/main.css" type="text/css" />
+    </head>
+    <body>
+          <div id="navbar">
+            <ul>
+              <li class="nav-left"><a href="/">boooks</a></li>
+              <li class="nav-left"><a href="/">Home</a></li>
+              <li class="nav-right"><a href="/logout">Logout</a></li>
+              <li class="nav-right"><a href="/setting">Setting</a></li>
+              <li class="nav-right"><a href="/mybooks" class="active">My Books</a></li>
+              <li class="nav-right"><a href="/allbooks">All Books</a></li>
+            </ul>
+          </div>
+          <div class="container">
+            <div id="dashboard">
+              <button id="yourReqsBtn">Your trade requests</button>
+              <button id="reqsForYouBtn">Trade requests for you</button>
+              <div id="yourOutstandingReqs">
+                <h1>Your outstanding requests:</h1>
+        
+                <div class="reqList"></div>
+              </div>
+              <div id="yourApprovedReqs">
+                <h1>Your trade request was approved:</h1>
+                <div class="reqList"></div>
+              </div>
+              <div id="reqsForYou">
+                <h1>Requests from other users:</h1>
+                <div class="reqList"></div>
+              </div>
+              <div id="reqsYouHaveApproved">
+                <h1>Requests you've approved:</h1>
+                <div class="reqList"></div>
+              </div>
+            </div>
+            <hr>
+            <div id="myBooks">
+              <h1>My books:</h1>
+              <input type="text" id="bookName"></input>
+              <button id="addBtn">Add</button>
+              <hr>
+              <div id="booksList">
+                
+              </div>
+              
+            </div>
+      
+      <script type="text/javascript" src="common/ajax-functions.js"></script>
+      <script type="text/javascript" src="controllers/dashboard.client.js"></script>
+      <script type="text/javascript" src="controllers/mybooks.client.js"></script>
+    </body>
+</html>

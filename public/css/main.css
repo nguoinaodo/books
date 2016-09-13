@@ -1,204 +1,224 @@
-/********* Fonts **********/
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto-Regular.ttf') format('truetype');
+/* Navigation bar */
+#navbar ul {
+  list-style-type: none;
+  margin: ;
+  padding: 0px 35px;
+  overflow: hidden;
+  background-color: #eee;
 }
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url('../fonts/Roboto-Medium.ttf') format('truetype');
+#navbar ul li {
+  
 }
 
-/****** Main Styling ******/
-
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	margin: 0;
-	padding: 0;
+#navbar ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 14px 18px;
+  font-size: 15px;
 }
 
-header {
-	color: #00BCD4;
-	height: 56px;
-	margin: 0 0 14px 0;
-	text-align: center;
+#navbar ul li a:hover {
+  background-color: #;
 }
 
-p {
-	margin: 8px 0 0 0;
+.active {
+  background-color: #ddd;
 }
 
-.container p {
-	text-align: center;
-	padding: 0;
+.nav-left {
+  float: left;
 }
 
-/****** Header Styling ******/
-
-header p {
-	margin: 16px 0 5px 0;
+.nav-right {
+  float: right;
 }
 
-.menu {
-	text-decoration: none;
-	padding: 6px;
-	margin: 0;
-	color: #727272;
+/* Features */
+#features {
+  position: relative;
+  width: 90%;  
+  left: 5%;
 }
 
-.menu:visited {
-	color: #727272;
+.feature {
+  background-color: #f1f1f1;
+  padding: 10px 14px;
+  margin: 3px 0px;
+  border-right: 1px solid #e6e6e6;
+  color: #0088bb;
+  cursor: pointer;
 }
 
-.menu:hover {
-	color: #FFA000;
+.feature:hover {
+  background-color: #e6e6e6;
 }
 
-.menu:active {
-	color: #FF630D;
+/* Banner */
+#banner {
+  background-color: #0077aa;
+  min-height: 280px;
+  margin: 30px 0px;
 }
 
-header a ~ p {
-	margin: 0;
-	padding: 0;
-	display: inline;
-	color: #ECEFF1;
+#banner h1 {
+  color: white;
+  position: absolute;
+  left: 5%;
+}
+/* Dashboard */
+#yourReqsBtn {
+  color: white;
+  background-color: #093;
+  border: 1px solid #063;
+  border-radius: 3px;
+  padding: 7px;
+  margin-top: 10px;
 }
 
-#display-name {
-	font-weight: 400;
+#yourReqsBtn:hover {
+  background-color: #00b33c;
 }
 
-/****** Login Styling ******/
-
-.login {
-	margin: 86px auto 0 auto;
-	text-align: center;
+#reqsForYouBtn {
+  color: white;
+  background-color: #06f;
+  border: 1px solid #05f;
+  border-radius: 3px;
+  padding: 7px;
 }
 
-#login-btn {
-	width: 225px;
-	padding: 7px 5px;
+#reqsForYouBtn:hover {
+  background-color: #1a75ff;
 }
 
-.btn p {
-	margin: 8px 0 0 0;
-	padding: 0;
+.reqList {
+  position : relative;
 }
 
-.btn > img {
-	float: left;
-	margin-left: 10px
+.req {
+  border-bottom: 1px solid #ddd;
+  margin: 8px 0px;
+  padding: 8px 0px;
+  color: #08b;
 }
 
-/****** Logo Div Styling ******/
-
-img {
-	margin: 0 auto;
-	display: block;
+.req:hover {
+  background-color: #eee;
 }
 
-.clementine-text { /* Styling for the Clementine.js text */
-	padding: 0;
-	margin: -25px 0 0 0;
-	font-weight: 500;
-	font-size: 60px;
-	color: #FFA000;
+.delBook, .delReq {
+  position: absolute;
+  top: 1px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #f55;
+  font-weight: bold;
+  font-size: 26px;
+  cursor: pointer;
 }
 
-/****** Click Styling ******/
-
-.btn-container {	/* Styling for the div that contains the buttons */
-	margin: -10px auto 0 auto;
-	text-align: center;
+.delReq:hover, .delBook:hover {
+  color: #f22;
 }
 
-.btn {	/* Styling for buttons */
-	margin: 0 8px;
-	color: white;
-	background-color: #00BCD4;
-	display: inline-block;
-	border: 0;
-	font-size: 14px;
-	border-radius: 3px;
-	padding: 10px 5px;
-	width: 100px;
-	font-weight: 500;
+.approve {
+  position: absolute;
+  top: 1px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  float: right;
+  color: #5b5;
+  font-weight: bold;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 1;
 }
 
-.btn:focus {	/* Remove outline when hovering over button */
-	outline: none;
+.approve:hover {
+  color: #090;
 }
 
-.btn:active {	/* Scale the button down by 10% when clicking on button */
-	transform: scale(0.9, 0.9);
-	-webkit-transform: scale(0.9, 0.9);
-	-moz-transform: scale(0.9, 0.9);
+/* Books */
+.request {
+  position: absolute;
+  left: px;
+  top: -5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: px solid #333;
+  color: #ff6666;
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: bold;
 }
 
-.btn-delete {	/* Styling for delete button */
-	background-color: #ECEFF1;
-	color: #212121;
+.request:hover {
+  color: #ff1a1a;
 }
 
-#click-nbr {
-	font-weight: 400;
+/* Input */
+input {
+  padding: 7px;
+  min-width: 300px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
 }
 
-/****** Profile Styling ******/
-
-.github-profile {
-	width: 350px;
-	height: 200px;
-	border-radius: 3px;
-	margin: 86px auto 0 auto;
-	background-color: #EEE;
-	text-align: center;
-	color: #000;
+input:hover {
+  border: 1px solid #0099e6;
 }
 
-.github-profile p:first-child {
-	padding-top: 16px;
+/* My books */
+#addBtn {
+  padding: 7px;
+  width: 50px;
+  border-radius: 3px;
+  border: 1px solid #06f;
+  background-color: #05f;
+  color: white;
 }
 
-.github-profile p:nth-child(5) {
-	margin-bottom: 16px
+#addBtn:hover {
+  background-color: #1a75ff;
+}
+/* Setting */
+#currentPassword {
+  margin: 10px 0px;
 }
 
-.github-profile p {
-	margin: 0 0 0 16px;
-	text-align: left;
+#changePassword {
+  margin: 10px 0px;  
 }
 
-.profile-value {
-	font-weight: 400;
+#savePass, #saveProfile {
+  padding: 7px;
+  margin: 6px 0px;
+  border-radius: 3px;
+  border: 1px solid #06f;
+  background-color: #05f;
+  color: white;
 }
 
-span {
-	font-weight: 500;
+#savePass:hover, #saveProfile:hover {
+  background-color: #1a75ff;
 }
 
-.github-profile > img {
-	padding-top: 16px;
-	margin-bottom: 16px;
+/* Login, register */
+#loginBtn, #regBtn {
+  padding: 7px;
+  margin: 6px 0px;
+  border-radius: 3px;
+  border: 1px solid #06f;
+  background-color: #05f;
+  color: white;
 }
 
-.github-profile .menu:hover {
-	color: #FFA000;
-}
-
-.github-profile .menu:active {
-	color: #FF630D;
-}
-
-#menu-divide {
-	color: #FFFFFF;
-	display: inline;
-	margin: 0;
+#loginBtn:hover, #regBtn:hover {
+  background-color: #1a75ff;
 }
